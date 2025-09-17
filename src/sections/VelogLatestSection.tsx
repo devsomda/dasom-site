@@ -21,7 +21,7 @@ async function getVelogLatest(
   const items = parsed?.rss?.channel?.item ?? [];
   // RSS가 글이 1개면 item이 객체일 수 있어 배열로 정규화 해야함
   const arr = Array.isArray(items) ? items : [items];
-  return arr.slice(0, limit).map((item: any) => ({
+  return arr.slice(0, limit).map((item: FeedItem) => ({
     title: item.title,
     link: item.link,
     pubDate: item.pubDate,
