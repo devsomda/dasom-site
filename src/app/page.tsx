@@ -2,6 +2,7 @@ import IntroSection from "@/sections/IntroSection";
 import ProfileSection from "@/sections/ProfileSection";
 import ProjectsSection from "@/sections/ProjectsSection";
 import BackgroundSection from "@/sections/BackgroundSection";
+import VelogLatestSection from "@/sections/VelogLatestSection";
 
 export default function Home() {
   return (
@@ -17,6 +18,9 @@ export default function Home() {
 
       {/* 경력 및 교육 사항 */}
       <BackgroundSection />
+
+      {/* 최신 블로그 글 */}
+      <VelogLatestSection />
     </main>
   );
 }
