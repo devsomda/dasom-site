@@ -21,7 +21,6 @@ export const profile = {
     { label: "Velog", href: "https://velog.io/@somda" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/devsomda/" },
   ],
-  // resumeHref: "/resume.pdf",
   resumeHref: null,
   imageSrc: "/dasom.png",
   stacks: [
@@ -43,4 +42,10 @@ export const profile = {
     { name: "MySQL", icon: SiMysql, color: "text-blue-500" },
     { name: "Figma", icon: SiFigma, color: "text-pink-500" },
   ],
+  highlights: [
+    "성능 최적화를 즐기는 개발자입니다.",
+    "코드를 오래 유지보수할 수 있도록 구조를 다듬습니다.",
+    "오류 추적과 대응 체계 구축에 강점이 있습니다.",
+    "협업 속에서 더 힘을 발휘합니다.",
+  ], // 추후 활용
 } as const;
