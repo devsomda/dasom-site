@@ -4,7 +4,7 @@ import MainSection from "@/components/ui/MainSection";
 export default function IntroSection() {
   return (
     <MainSection>
-      <div className="h-full flex flex-col items-center justify-center">
+      <div className="flex-1 flex flex-col items-center justify-center">
         <h1 className="text-4xl font-bold tracking-tight whitespace-pre-line">
           {intro.greeting}
           <br />

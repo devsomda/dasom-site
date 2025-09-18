@@ -29,7 +29,7 @@ export default function ProfileSection() {
 
       <dl className="mt-4 grid gap-3 text-gray-700 w-full max-w-xl">
         <div className="flex justify-between">
-          <dt className="text-gray-500">이메일</dt>
+          <dt className="text-gray-500 text-left">이메일</dt>
           <dd>
             <a
               href={`mailto:${email}`}
@@ -41,7 +41,7 @@ export default function ProfileSection() {
         </div>
 
         <div className="flex justify-between">
-          <dt className="text-gray-500">링크</dt>
+          <dt className="text-gray-500 text-left">링크</dt>
           <dd className="flex flex-wrap gap-4">
             {links.map((l) => (
               <Link
@@ -59,7 +59,7 @@ export default function ProfileSection() {
 
         {resumeHref && (
           <div className="flex justify-between">
-            <dt className="text-gray-500">이력서</dt>
+            <dt className="text-gray-500 text-left">이력서</dt>
             <dd>
               <Link
                 href={resumeHref}
@@ -74,8 +74,8 @@ export default function ProfileSection() {
 
         {profile.stacks && (
           <div className="flex justify-between">
-            <dt className="text-gray-500">기술 스택</dt>
-            <dd className="flex flex-wrap gap-4">
+            <dt className="text-gray-500 text-left">기술 스택</dt>
+            <dd className="flex flex-wrap gap-4 justify-end">
               {profile.stacks.map(({ name, icon: Icon, color }) => (
                 <div key={name} className="flex items-center gap-2">
                   <Icon className={`w-6 h-6 ${color}`} />
@@ -88,8 +88,8 @@ export default function ProfileSection() {
 
         {profile.subStacks && (
           <div className="flex justify-between">
-            <dt className="text-gray-500">기타 Tools</dt>
-            <dd className="flex flex-wrap gap-4">
+            <dt className="text-gray-500 text-left">기타 Tools</dt>
+            <dd className="flex flex-wrap gap-4 justify-end">
               {profile.subStacks.map(({ name, icon: Icon, color }) => (
                 <div
                   key={name}
