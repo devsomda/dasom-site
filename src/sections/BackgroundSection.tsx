@@ -3,7 +3,7 @@ import { experiences, educations } from "@/data/background.data";
 
 export default function BackgroundSection() {
   return (
-    <MainSection fullHeight={false}>
+    <MainSection>
       <h2 className="text-3xl font-semibold">Experience & Education</h2>
       <hr className="mt-2 w-full border-gray-200" />
 
