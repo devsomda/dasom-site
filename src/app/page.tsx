@@ -6,7 +6,7 @@ import VelogLatestSection from "@/sections/VelogLatestSection";
 
 export default function Home() {
   return (
-    <main className="mx-auto px-10 h-screen overflow-y-scroll snap-y snap-mandatory break-keep">
+    <main className="mx-auto px-4 sm:px-6 lg:px-10 h-[100svh] overflow-y-scroll snap-y snap-mandatory break-keep">
       {/* 자기소개 */}
       <IntroSection />
 
