@@ -34,20 +34,18 @@ export default async function VelogLatestSection() {
   if (!items.length) return null;
 
   return (
-    <MainSection>
-      <h2 className="text-3xl font-semibold">Velog· Latest</h2>
-      <hr className="mt-2 w-full border-gray-200" />
-      <ul className="mt-6 grid gap-6 md:grid-cols-2">
+    <MainSection title="Velog· Latest">
+      <ul className="grid gap-4 sm:gap-6 grid-cols-1 lg:grid-cols-2 w-full">
         {items.map((post) => (
           <li
             key={post.link}
-            className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition"
+            className="rounded-lg border border-gray-200 bg-white p-4 sm:p-6 shadow-sm hover:shadow-md transition"
           >
             <Link
               href={post.link}
               target="_blank"
               rel="noreferrer"
-              className="text-lg font-semibold text-gray-900 hover:text-primary"
+              className="text-base sm:text-lg font-semibold text-gray-900 hover:text-primary block"
             >
               {post.title}
             </Link>
@@ -59,12 +57,12 @@ export default async function VelogLatestSection() {
             )}
 
             {post.description && (
-              <p className="mt-3 text-sm text-gray-700 line-clamp-3">
+              <p className="mt-2 sm:mt-3 text-sm text-gray-700 line-clamp-3 leading-relaxed">
                 {post.description?.replace(/<[^>]+>/g, "").slice(0, 120)}...
               </p>
             )}
 
-            <div className="mt-4">
+            <div className="mt-3 sm:mt-4">
               <Link
                 href={post.link}
                 target="_blank"
