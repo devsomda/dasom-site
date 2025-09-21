@@ -52,3 +52,23 @@ Next.js + Tailwind 기반의 개인 포트폴리오 웹사이트입니다.
 #### ✅ 오늘의 성과
 
 - 커스텀 도메인 적용하여 배포 완료
+
+### 2025-09-21
+
+#### 📝 What I Learned
+
+뷰포트 단위 차이 정리
+
+- 100vh: 브라우저 UI(주소창·하단바 포함) 기준, 모바일 Safari에서 실제 보이는 높이보다 크게 잡혀 스크롤 튐 발생
+- 100svh (small viewport height): UI가 열린 상태의 실제 보이는 높이, 안정적으로 한 화면 꽉 채우기에 적합
+- 100lvh (large viewport height): UI가 닫힌 상태의 최대 뷰포트 높이, 풀스크린 레이아웃에 유용
+- 100dvh (dynamic viewport height): UI 열림/닫힘에 따라 동적으로 변함, 하지만 레이아웃 튀는 문제가 있을 수 있음
+
+scroll-snap-type의 옵션 비교
+- snap-mandatory: 스크롤 종료 시 반드시 가까운 섹션으로 정렬
+- snap-proximity: 스크롤이 끝났을 때 snap point 근처라면 부드럽게 스냅되지만, 멀리 있으면 스냅하지 않음
+
+#### ✅ 오늘의 성과
+
+-  메인 섹션 레이아웃을 `min-h-[100svh]`로 수정해 iOS Safari 환경에서도 안정적인 풀스크린 대응
+-  Projects 섹션에 콘텐츠 길이에 따라 **수평 스크롤 ↔ 그리드 레이아웃 전환** 로직 구현
